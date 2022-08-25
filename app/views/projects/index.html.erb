@@ -1,0 +1,19 @@
+
+<h1>Projects</h1>
+  
+
+
+<div class="row">
+
+<% @projects.each do |project| %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= project.name %></h5>
+    <p class="card-text"><%= project.description %>.</p>
+    <a href="#" class="card-link"><%= link_to " Show", project %></a>
+  </div>
+</div>
+<% end %>
+</div>
+
+<%= link_to "New project", new_project_path %>
